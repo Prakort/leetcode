@@ -1,0 +1,42 @@
+
+int m = A.length;
+int n = B.length;
+
+if m > n swap A, B m,n
+
+int start = 0;  // |---------|m
+int end = m;    // |----------------|n
+
+                // start    end
+
+int mid = (m+n+1)/2
+while ( start <= end)
+{
+    int i = (start + end)/2
+    int j = mid - i
+
+    if(i> 0 && A[i-1] > B[j] ) // mean A -------10|12-------
+    {                          //      B ------5|6-------------- 10>6
+    
+        end = i -1;
+    }
+    else if ( i<m && B[j-1]>A[j])
+    {
+        start = i+1;
+    }
+    else
+    {
+        int leftMax;
+        if(i==0) leftMax=B[j-1];
+        else if(j==0) leftMax=A[j-1];
+        else Max(B[j-1],A[j-1])
+
+        if(len%2==1) return leftMax;
+
+        int rightMax;
+        if(i==m) rightMax=B[j];
+        else if(j==m) rightMax=A[j];
+        else Min(B[j],A[j])
+
+    }
+}

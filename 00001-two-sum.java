@@ -9,7 +9,7 @@ class Solution {
     #space complexity is 1;
 
 */
-    public int[] twoSum(int[] nums, int target) {
+    public int[] twoSum01(int[] nums, int target) {
         
         for ( int i =0; i<nums.length ;i++)
         {
@@ -20,7 +20,7 @@ class Solution {
             }
         
         }
-        throw new IllegalArgumentException("No two sum solution");
+        throw new IllegalArgumentException("No solution");
     }
 
 /*
@@ -31,7 +31,7 @@ class Solution {
 
 */
 
-    public int[] twoSum(int[] nums, int target) {
+    public int[] twoSum02(int[] nums, int target) {
 
         Map <Integer,Integer> map = new HashMap<>();
         
@@ -44,7 +44,7 @@ class Solution {
             else
                return new int []{map.get(complement),i};
         }
-            throw new IllegalArgumentException("No two sum solution");
+            throw new IllegalArgumentException("No solution");
     }
 
 

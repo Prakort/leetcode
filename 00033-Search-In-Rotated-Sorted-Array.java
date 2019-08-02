@@ -44,13 +44,24 @@ Binary Search O(n): log(n)
              int mid = (j+k)/2;
             if(nums[mid]==target)
                 return mid;
-            if ( nums[mid]>nums[k]){
-            if(nums[mid]>target && nums[j]<=target )
-                k=mid-1;
-            else
-                j=mid+1;
-            }else
+            // check if mid element > last element
+            // that mean right sub array is acsending
+            // [ 5 6 7 8 1 2 3 4 ]
+            // 8 > 4
+            // target is 6
+            if ( nums[mid]>nums[k])
             {
+                // if 8 > 6 and 5 < 6
+                // hi = mid -1
+                if(nums[mid]>target && nums[j]<=target )
+                    k=mid-1;
+                else
+                    j=mid+1;
+            }
+            else 
+            {
+                // check if mid < last element
+                // just regular binary search algo
                 if(nums[mid]<target && target<= nums[k] )
                 j=mid+1;
             else

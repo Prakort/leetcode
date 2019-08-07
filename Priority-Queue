@@ -1,0 +1,3 @@
+poll O(n): logn get base element
+peek O(n): 1    look at the top element
+add O(n): logn  add element into PQ

@@ -17,7 +17,8 @@ by multiply every element before it same as the right side
 then we get the result by L[i]*R[i]= re[i] by pre calculate the product
 
 
-
+Time: O(n)
+Space: O(n)
 
 */
 

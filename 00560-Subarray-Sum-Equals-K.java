@@ -23,7 +23,8 @@ class Solution {
     }   
         return counter++;
 
-
+    // Time: O(n)
+    // Space: O(n)
     public int second(int []arr,int k)
     {
         int count =0;
